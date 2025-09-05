@@ -157,7 +157,7 @@ flipUp.addEventListener('click', ()=> document.querySelectorAll('.card').forEach
 flipDown.addEventListener('click', ()=> document.querySelectorAll('.card').forEach(c=>c.classList.remove('flipped')));
 
 // Load JSON deck
-fetch("https://andrasihastra.github.io/crystaldivination/deck.json")
+fetch("https://github.com/andrasihastra/crystaldivination/blob/main/deck.json")
   .then(r => r.json())
   .then(data => {
     DECK = data;
@@ -174,6 +174,7 @@ fetch("https://andrasihastra.github.io/crystaldivination/deck.json")
 </script>
 </body>
 </html>
+
 
 
 
