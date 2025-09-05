@@ -83,7 +83,7 @@
       <section id="grid" class="grid" aria-live="polite" aria-busy="true"></section>
     </div>
 
-    <div class="footer">Angel wings card back • White &amp; gold luxury feel • Responsive for desktop, tablet and mobile.</div>
+    <div class="footer">Angel wings</div>
   </div>
 
 <script>
@@ -157,7 +157,7 @@ flipUp.addEventListener('click', ()=> document.querySelectorAll('.card').forEach
 flipDown.addEventListener('click', ()=> document.querySelectorAll('.card').forEach(c=>c.classList.remove('flipped')));
 
 // Load JSON deck
-fetch(DECK_URL)
+fetch(https://raw.githubusercontent.com/andrasihastra/crystaldivination/refs/heads/main/deck.json)
   .then(r => r.json())
   .then(data => {
     DECK = data;
@@ -173,3 +173,4 @@ fetch(DECK_URL)
 </script>
 </body>
 </html>
+
