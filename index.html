@@ -157,23 +157,28 @@ flipUp.addEventListener('click', ()=> document.querySelectorAll('.card').forEach
 flipDown.addEventListener('click', ()=> document.querySelectorAll('.card').forEach(c=>c.classList.remove('flipped')));
 
 // Load JSON deck
-fetch("deck.json")
-  .then(r => r.json())
-  .then(data => {
-    DECK = data;
-    status.textContent = `Deck ready — ${DECK.length} cards.`;
-    // show placeholders
-    const placeholders = Array.from({length:7}).map(() => ({name:'—', meaning:'Shuffle & draw to reveal.'}));
-    renderCards(placeholders, false);
-  })
-  .catch(err => {
-    console.error("Error loading deck:", err);
-    status.textContent = "❌ Failed to load deck.";
-  });
+ fetch("deck.json")
+    .then(r => r.json())
+    .then(data => {
+      DECK = data;
+      status.textContent = `Deck ready — ${DECK.length} cards.`;
+
+      // show placeholders
+      const placeholders = Array.from({length:7}).map(()=>({
+        name:'—',
+        meaning:'Shuffle & draw to reveal.'
+      }));
+      renderCards(placeholders, false);
+    })
+    .catch(err => {
+      console.error("Error loading deck:", err);
+      status.textContent = "❌ Failed to load deck.";
+    });
 
 </script>
 </body>
 </html>
+
 
 
 
